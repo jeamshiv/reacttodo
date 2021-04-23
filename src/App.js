@@ -65,6 +65,18 @@ function App() {
       }}>
       </Route>
 
+
+      <Route exact path="/reacttodo" render={() =>{
+        return (
+          <>
+            <AddTodo addTodo={addTodo}/>
+            <Todos todos={todos} onDelete={onDelete} />
+          </>
+        )
+      }}>
+      </Route>
+      
+
     <Route exact path="/about">
       <About />
     </Route>
