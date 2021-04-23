@@ -1,13 +1,10 @@
 import './App.css';
 import Header from './Components/Header';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Footer from './Components/Footer';
 import Todos from './Components/Todos';
 import AddTodo from './Components/AddTodo';
-import About from './Components/About';
-import Contact from './Components/Contact';
-import Page404 from './Components/Page404';
 
 function App() {
   
@@ -23,7 +20,7 @@ function App() {
 
   const addTodo = (title, desc)=>{
     let sno;
-    if(todos.length===0){
+    if(todos.length==0){
       sno = 1;
     } else{
       sno = todos[todos.length-1].sno+1;
@@ -50,35 +47,12 @@ function App() {
 
 
   return (
-    <>
-   <Router>
-    <Header title="Shiv ToDo"/>
-    <Switch>
-
-      <Route exact path="/" render={() =>{
-        return (
-          <>
-            <AddTodo addTodo={addTodo}/>
-            <Todos todos={todos} onDelete={onDelete} />
-          </>
-        )
-      }}>
-      </Route>
-
-    <Route exact path="/about">
-      <About />
-    </Route>
-
-    <Route exact path="/contact">
-      <Contact />
-    </Route>
-
-    <Route component={Page404} />
-      
-    </Switch>
-    <Footer />
-    </Router>
-    </>
+    <div className="App">
+      <Header title="Shiv ToDo"/>
+      <AddTodo addTodo={addTodo}/>
+      <Todos todos={todos} onDelete={onDelete} />
+      <Footer />
+    </div>
   );
 }
 
