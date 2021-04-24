@@ -44,19 +44,19 @@ export default class Contact extends Component {
                 <div className="col-lg-6">
                     <form className="mt-5">
                         <div className="form-group">
-                            <input type="text" name="name" className="form-control" onChange={(e) =>this.changeHandler(e)} placeholder="Your Name" />
+                            <input type="text" name="name" className="form-control" onChange={(e) =>this.changeHandler(e)} placeholder="Your Name" required=""/>
                         </div>
 
                         <div className="form-group">
-                            <input type="text" name="email" className="form-control" onChange={(e) =>this.changeHandler(e)} placeholder="Your Email" />
+                            <input type="text" name="email" className="form-control" onChange={(e) =>this.changeHandler(e)} placeholder="Your Email" required=""/>
                         </div>
                         
                         <div className="form-group">
-                            <input type="tel" name="phone" className="form-control" onChange={(e) =>this.changeHandler(e)} placeholder="Your Phone" />
+                            <input type="tel" name="phone" className="form-control" onChange={(e) =>this.changeHandler(e)} placeholder="Your Phone" required=""/>
                         </div>
 
                         <div className="form-group">
-                        <textarea name="message" className="form-control" rows="3" required="required" onChange={(e) =>this.changeHandler(e)} placeholder="Your Message"></textarea>
+                        <textarea name="message" className="form-control" rows="3" required="" onChange={(e) =>this.changeHandler(e)} placeholder="Your Message"></textarea>
                         </div>
 
                     <button type="submit" className="btn btn-success"  onClick={(e) => this.clickHandler(e)} ><i className="fab fa-whatsapp"></i> Send WhatsApp </button>
