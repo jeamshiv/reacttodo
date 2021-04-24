@@ -10,7 +10,8 @@ export default function AddTodo(props) {
 
         e.preventDefault();
         if(!title || !desc){
-            alert("Require Title or Description")
+            alert("Require Title or Description");
+            break;
         } else{
         props.addTodo(title, desc)
         setTitle("");
