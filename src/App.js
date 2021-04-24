@@ -66,7 +66,7 @@ function App() {
       </Route>
 
 
-      <Route path="https://jeamshiv.github.io/reacttodo/" render={() =>{
+      <Route path="/" render={() =>{
         return (
           <>
             <AddTodo addTodo={addTodo}/>
