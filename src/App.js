@@ -66,7 +66,7 @@ function App() {
       </Route>
 
 
-      <Route path="/reacttodo" render={() =>{
+      <Route path="/reacttodo/reacttodo" render={() =>{
         return (
           <>
             <AddTodo addTodo={addTodo}/>
