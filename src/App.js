@@ -55,7 +55,7 @@ function App() {
     <Header title="Shiv ToDo"/>
     <Switch>
 
-      <Route exact path="/" render={() =>{
+      <Route exact path="/reacttodo/" render={() =>{
         return (
           <>
             <AddTodo addTodo={addTodo}/>
@@ -77,11 +77,11 @@ function App() {
       </Route>
       
 
-    <Route exact path="/about">
+    <Route exact path="/reacttodo/about">
       <About />
     </Route>
 
-    <Route exact path="/contact">
+    <Route exact path="/reacttodo/contact">
       <Contact />
     </Route>
 
