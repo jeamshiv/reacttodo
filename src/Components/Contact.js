@@ -25,6 +25,7 @@ export default class Contact extends Component {
 
         if(!this.state.name || !this.state.email || !this.state.phone || !this.state.message){
             alert("Required to fill all the form fields");
+            document.getElementsByClassName("btn-success").required();
         } else {
 	    window.open(`https://wa.me/918750303073?text=Hello I am ${this.state.name} %0aEmail: ${this.state.email} %0aContact For: ${this.state.message} %0aThank Your!`, '_blank');
         }
